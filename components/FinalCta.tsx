@@ -1,5 +1,6 @@
 import { BloomLogo } from "./BloomLogo";
 import { Arrow } from "./Arrow";
+import { BookDemoButton } from "./DemoModal";
 
 export function FinalCta() {
   return (
@@ -14,10 +15,10 @@ export function FinalCta() {
           on the table, and tell you straight whether Bloom is the right fit. Either way
           you leave with a free property review.
         </p>
-        <a className="btn btn-lg" href="#">
+        <BookDemoButton className="btn btn-lg">
           Book a Demo
           <Arrow />
-        </a>
+        </BookDemoButton>
         <div className="final-cta-meta">
           <span>No long-term contracts</span>
           <span className="sep">·</span>

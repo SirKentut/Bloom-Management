@@ -1,5 +1,6 @@
 import { BloomLogo } from "./BloomLogo";
 import { Arrow } from "./Arrow";
+import { BookDemoButton } from "./DemoModal";
 
 export function Nav() {
   return (
@@ -9,10 +10,10 @@ export function Nav() {
           <BloomLogo className="brand-logo" />
           <span>Bloom</span>
         </a>
-        <a className="btn btn-ghost" href="#book">
+        <BookDemoButton className="btn btn-ghost">
           Book a Demo
           <Arrow />
-        </a>
+        </BookDemoButton>
       </div>
     </nav>
   );

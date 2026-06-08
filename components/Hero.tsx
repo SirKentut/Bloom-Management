@@ -1,6 +1,7 @@
 "use client";
 
 import { Arrow } from "./Arrow";
+import { BookDemoButton } from "./DemoModal";
 
 const FALLBACKS = [
   "https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?auto=format&fit=crop&w=2880&q=80",
@@ -46,10 +47,10 @@ export function Hero() {
           &ldquo;the wifi&rsquo;s down&rdquo; texts — so you don&rsquo;t have to.
         </p>
         <div className="hero-cta-row">
-          <a className="btn btn-lg" href="#book">
+          <BookDemoButton className="btn btn-lg">
             Book a Demo
             <Arrow />
-          </a>
+          </BookDemoButton>
           <span className="hero-meta">30 min · No pressure · Free property review</span>
         </div>
       </div>
