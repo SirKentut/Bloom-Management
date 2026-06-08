@@ -1034,11 +1034,16 @@ h2.demo-q,
   transform: none;
 }
 
-.demo-schedule { justify-content: flex-start; }
+.demo-schedule {
+  /* Size to its own content and let the panel scroll, rather than
+     stretching (flex:1) — which let the iframe spill over the footer. */
+  flex: 0 0 auto;
+  min-height: auto;
+  justify-content: flex-start;
+}
 .demo-iframe {
-  flex: 1;
   width: 100%;
-  min-height: 320px;
+  height: 360px;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: white;
