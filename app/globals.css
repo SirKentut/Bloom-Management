@@ -1104,8 +1104,8 @@ h2.demo-q,
 @media (max-width: 900px) {
   .hero { min-height: 640px; height: auto; padding: 140px 0 80px; }
   .creds-row { grid-template-columns: 1fr; gap: var(--s-48); }
-  .cred-1, .cred-2, .cred-3 { align-items: flex-start; text-align: left; }
-  .cred-2 .cred-label, .cred-3 .cred-label { text-align: left; }
+  .cred-1, .cred-2, .cred-3 { align-items: center; text-align: center; }
+  .cred-1 .cred-label, .cred-2 .cred-label, .cred-3 .cred-label { text-align: center; }
   .feature-block {
     grid-template-columns: 1fr;
     gap: var(--s-32);
