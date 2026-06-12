@@ -87,7 +87,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--s-24) 0;
+  padding-top: var(--s-24);
+  padding-bottom: var(--s-24);
 }
 .brand {
   display: inline-flex;
