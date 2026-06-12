@@ -174,14 +174,26 @@ function DemoModal({ onClose }: { onClose: () => void }) {
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") {
+        onClose();
+        return;
+      }
+      // On a choice step, let A–Z keys pick the matching option.
+      if (step.kind === "choice" && step.options && e.key.length === 1) {
+        if (e.metaKey || e.ctrlKey || e.altKey) return;
+        const i = e.key.toLowerCase().charCodeAt(0) - 97; // "a" -> 0
+        if (i >= 0 && i < step.options.length) {
+          e.preventDefault();
+          choose(step.id, step.options[i]);
+        }
+      }
     };
     window.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = prev;
       window.removeEventListener("keydown", onKey);
     };
-  }, [onClose]);
+  }, [onClose, step, choose]);
 
   /* focus the input when its step shows */
   useEffect(() => {
