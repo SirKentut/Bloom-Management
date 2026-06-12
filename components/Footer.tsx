@@ -30,7 +30,7 @@ export function Footer() {
                 <a href="#book">Book a demo</a>
               </li>
               <li>
-                <a href="mailto:hello@bloom.management">hello@bloom.management</a>
+                <a href="mailto:pierreharbin@bloomcleaning.org">pierreharbin@bloomcleaning.org</a>
               </li>
             </ul>
           </div>
